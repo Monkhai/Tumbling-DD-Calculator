@@ -1,9 +1,10 @@
-const buttonsEl = document.querySelectorAll(".skill__button");
-const skillValuesEl = document.querySelectorAll(".skill__value");
-const skillNamesEl = document.querySelectorAll(".skill__name");
-const calcEl = document.querySelector(".total__dd");
-const deleteBtnEl = document.querySelector(".delete_button");
-const resetBtnEl = document.querySelector(".reset_button");
+const skillButtonEl = document.querySelectorAll('.skill__button');
+const skillValuesEl = document.querySelectorAll('.skill__value');
+const skillNamesEl = document.querySelectorAll('.skill__name');
+const calcEl = document.querySelector('.total__dd');
+const deleteBtnEl = document.querySelector('.delete_button');
+const resetBtnEl = document.querySelector('.reset_button');
+const addBtnEl = document.querySelector('.add_button');
 
 // This sets the value of each skillValue element to 0. This allows the total difficulty to calculate difficulty of not finished passes.
 skillValuesEl.forEach((skillValue) => {
@@ -14,8 +15,8 @@ skillValuesEl.forEach((skillValue) => {
 let skillIndex = 0;
 
 // Add a click event listener to each button
-buttonsEl.forEach((button) => {
-  button.addEventListener("click", function () {
+skillButtonEl.forEach((button) => {
+  button.addEventListener('click', function () {
     // Set the text content of the current skill value span
     skillValuesEl[skillIndex].textContent = button.value;
     skillNamesEl[skillIndex].textContent = button.textContent;
@@ -36,34 +37,36 @@ buttonsEl.forEach((button) => {
 
     // If filled all 8 skill values, disable buttons
     if (skillIndex >= skillValuesEl.length) {
-      buttonsEl.disable = true;
+      skillButtonEl.disable = true;
     }
   });
 });
 
-deleteBtnEl.addEventListener("click", function () {
-  skillIndex--;
-  skillValuesEl[skillIndex].textContent = "";
-  skillNamesEl[skillIndex].textContent = "";
-  skillValuesEl[skillIndex].value = "0";
+deleteBtnEl.addEventListener('click', function () {
+  if (skillIndex > 0) {
+    skillIndex--;
+    skillValuesEl[skillIndex].textContent = '';
+    skillNamesEl[skillIndex].textContent = '';
+    skillValuesEl[skillIndex].value = '0';
 
-  let totalDifficulty = 0;
-  skillValuesEl.forEach((skillValue) => {
-    // the parseFloat converts the value of skillValue into
-    totalDifficulty += parseFloat(skillValue.value);
-  });
+    let totalDifficulty = 0;
+    skillValuesEl.forEach((skillValue) => {
+      // the parseFloat converts the value of skillValue into
+      totalDifficulty += parseFloat(skillValue.value);
+    });
 
-  // Update the total difficulty element// .toFixed is what forces calc to show the number only with 1 digit after the decimal point
-  calcEl.textContent = totalDifficulty.toFixed(1);
+    // Update the total difficulty element// .toFixed is what forces calc to show the number only with 1 digit after the decimal point
+    calcEl.textContent = totalDifficulty.toFixed(1);
+  }
 });
 
-resetBtnEl.addEventListener("click", function () {
+resetBtnEl.addEventListener('click', function () {
   skillValuesEl.forEach((skill) => {
-    skill.textContent = "";
-    skill.value = "0";
+    skill.textContent = '';
+    skill.value = '0';
   });
   skillNamesEl.forEach((skill) => {
-    skill.textContent = "";
+    skill.textContent = '';
   });
 
   skillIndex = 0;
