@@ -54,7 +54,8 @@ body {
     'line-1   line-1   line-1   line-1   line-1   line-1   line-1   line-1   line-1'
     'line-2   line-2   line-2   line-2   line-2   line-2   line-2   line-2   line-2'
     'line-3   line-3   line-3   line-3   line-3   line-3   line-3   line-3   line-3'
-    'line-4   total-DD   total-DD   total-DD   total-DD   total-DD   total-DD   total-DD   total-DD';
+    'line-4   line-4   line-4   line-4   line-4   line-4   line-4   line-4   line-4'
+    'line-5   total-DD   total-DD   total-DD   total-DD   total-DD   total-DD   total-DD   total-DD';
 }
 
 .total__dd {
@@ -67,6 +68,28 @@ body {
   align-items: center;
   padding: 1px 1px 1px 1px;
   border: 1px solid #efcf4e;
+}
+
+.skill__bonus {
+  background-color: #323b40;
+  font-size: 30px;
+  color: #efcf4e;
+  border: 1px solid #efcf4e;
+  height: 41.5px;
+  resize: none;
+  text-align: center;
+  vertical-align: middle;
+}
+
+.skill__bonus__highlighted {
+  background-color: #323b40;
+  font-size: 30px;
+  color: #efcf4e;
+  border: 2px solid #efcf4e;
+  height: 41.5px;
+  resize: none;
+  text-align: center;
+  vertical-align: middle;
 }
 
 .buttons {
@@ -146,14 +169,6 @@ body {
   grid-column: 2/2;
 }
 
-/* .add_button {
-  grid-row: 3 / 3 !important;
-  grid-column: 1 / 1;
-  border-radius: 0% 0% 0% 0%;
-  height: 140px;
-  width: 60px;
-} */
-
 .place_holder {
   grid-row: 4/4;
   grid-column: 2/2;
@@ -204,21 +219,21 @@ body {
     display: grid;
     margin-bottom: 25px;
     grid-template-rows: repeat(8, 1fr);
-    grid-template-columns: repeat(3, 1fr);
+    grid-template-columns: repeat(4, 1fr);
     font-size: 20px;
     color: #efcf4e;
     border: 1px solid #efcf4e;
     /* margin: 0px 50px 50px 50px; */
     grid-template-areas:
-      'skill-1    value-1    number-1'
-      'skill-2    value-2    number-2'
-      'skill-3    value-3    number-3'
-      'skill-4    value-4    number-4'
-      'skill-5    value-5    number-5'
-      'skill-6    value-6    number-6'
-      'skill-7    value-7    number-7'
-      'skill-8    value-8    number-8'
-      'total-DD   total-DD   total-DD';
+      'skill-1    value-1    bonus-1    number-1'
+      'skill-2    value-2    bonus-2    number-2'
+      'skill-3    value-3    bonus-3    number-3'
+      'skill-4    value-4    bonus-4    number-4'
+      'skill-5    value-5    bonus-5    number-5'
+      'skill-6    value-6    bonus-6    number-6'
+      'skill-7    value-7    bonus-7    number-7'
+      'skill-8    value-8    bonus-8    number-8'
+      'total-DD   total-DD   total-DD   total-DD';
   }
 
   .buttons {
@@ -324,6 +339,31 @@ body {
   }
   .sk8 {
     grid-area: skill-8;
+  }
+
+  .skB1 {
+    grid-area: bonus-1;
+  }
+  .skB2 {
+    grid-area: bonus-2;
+  }
+  .skB3 {
+    grid-area: bonus-3;
+  }
+  .skB4 {
+    grid-area: bonus-4;
+  }
+  .skB5 {
+    grid-area: bonus-5;
+  }
+  .skB6 {
+    grid-area: bonus-6;
+  }
+  .skB7 {
+    grid-area: bonus-7;
+  }
+  .skB8 {
+    grid-area: bonus-8;
   }
 
   /**/
