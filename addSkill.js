@@ -1,4 +1,9 @@
-import { skillValuesEl } from './selectors';
+import {
+  calcEl,
+  skillValuesEl,
+  skillButtonEl,
+  skillNamesEl,
+} from './selectors';
 
 skillValuesEl.forEach((skillValue) => {
   skillValue.value = 0;
