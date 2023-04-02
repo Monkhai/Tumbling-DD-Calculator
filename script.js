@@ -13,7 +13,17 @@ skillValuesEl.forEach((skillValue) => {
 });
 
 // Initialize the skill index to 0
-let skillIndex = 0;
+export let skillIndex = 0;
+export function resetIndex() {
+  skillIndex = 0;
+}
+export function incIndex() {
+  skillIndex++;
+}
+
+export function decIndex() {
+  skillIndex--;
+}
 
 // Add a skill
 skillButtonEl.forEach((button) => {

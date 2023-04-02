@@ -1,11 +1,9 @@
-import { skillValuesEl, skillNamesEl, calcEl } from './selectors';
-
-// Initialize the skill index to 0
-let skillIndex = 0;
+import { skillValuesEl, skillNamesEl, calcEl } from './selectors.js';
+import { decIndex, skillIndex } from './script.js';
 
 export default function deleteSkill() {
   if (skillIndex > 0) {
-    skillIndex--;
+    decIndex();
     skillValuesEl[skillIndex].textContent = '';
     skillNamesEl[skillIndex].textContent = '';
     skillValuesEl[skillIndex].value = '0';

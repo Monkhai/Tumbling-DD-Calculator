@@ -1,5 +1,5 @@
 body {
-  font-family: "Merriweather", sans-serif;
+  font-family: 'Merriweather', sans-serif;
   height: 100%;
   background-color: #323b40;
   display: flex;
@@ -26,6 +26,14 @@ body {
   text-size-adjust: auto;
 }
 
+.value_presentor {
+  padding-left: 5px !important;
+}
+
+.total__dd__text {
+  padding-left: 5px !important;
+}
+
 .photo {
   width: 70%;
   justify-self: center;
@@ -43,10 +51,10 @@ body {
   border: 1px solid #efcf4e;
   margin: 0px 50px 50px 50px;
   grid-template-areas:
-    "line-1   line-1   line-1   line-1   line-1   line-1   line-1   line-1   line-1"
-    "line-2   line-2   line-2   line-2   line-2   line-2   line-2   line-2   line-2"
-    "line-3   line-3   line-3   line-3   line-3   line-3   line-3   line-3   line-3"
-    "line-4   total-DD   total-DD   total-DD   total-DD   total-DD   total-DD   total-DD   total-DD";
+    'line-1   line-1   line-1   line-1   line-1   line-1   line-1   line-1   line-1'
+    'line-2   line-2   line-2   line-2   line-2   line-2   line-2   line-2   line-2'
+    'line-3   line-3   line-3   line-3   line-3   line-3   line-3   line-3   line-3'
+    'line-4   total-DD   total-DD   total-DD   total-DD   total-DD   total-DD   total-DD   total-DD';
 }
 
 .total__dd {
@@ -202,15 +210,15 @@ body {
     border: 1px solid #efcf4e;
     /* margin: 0px 50px 50px 50px; */
     grid-template-areas:
-      "skill-1    value-1    number-1"
-      "skill-2    value-2    number-2"
-      "skill-3    value-3    number-3"
-      "skill-4    value-4    number-4"
-      "skill-5    value-5    number-5"
-      "skill-6    value-6    number-6"
-      "skill-7    value-7    number-7"
-      "skill-8    value-8    number-8"
-      "total-DD   total-DD   total-DD";
+      'skill-1    value-1    number-1'
+      'skill-2    value-2    number-2'
+      'skill-3    value-3    number-3'
+      'skill-4    value-4    number-4'
+      'skill-5    value-5    number-5'
+      'skill-6    value-6    number-6'
+      'skill-7    value-7    number-7'
+      'skill-8    value-8    number-8'
+      'total-DD   total-DD   total-DD';
   }
 
   .buttons {
