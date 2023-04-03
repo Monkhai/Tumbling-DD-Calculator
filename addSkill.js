@@ -1,9 +1,4 @@
-import {
-  calcEl,
-  skillValuesEl,
-  skillButtonEl,
-  skillNamesEl,
-} from './selectors.js';
+import { calcEl, skillValuesEl, skillButtonEl, skillNamesEl, bonusDropdownEl } from './selectors.js';
 import { skillIndex, incIndex } from './script.js';
 
 skillValuesEl.forEach((skillValue) => {
@@ -23,14 +18,17 @@ export default function addSkill(event) {
   // Move to the next skill index
   incIndex();
 
-  // Calculate the total difficulty
-  let totalDifficulty = 0;
+  let SkillDifficulty = 0;
   skillValuesEl.forEach((skillValue) => {
-    // the parseFloat converts the value of skillValue into
-    totalDifficulty += parseFloat(skillValue.value);
+    SkillDifficulty += parseFloat(skillValue.value);
   });
+  let bonusDifficulty = 0;
 
-  // Update the total difficulty element// .toFixed is what forces calc to show the number only with 1 digit after the decimal point
+  bonusDropdownEl.forEach((dropdown) => {
+    bonusDifficulty += parseFloat(dropdown.value);
+  });
+  let totalDifficulty = SkillDifficulty + bonusDifficulty;
+  console.log(totalDifficulty);
   calcEl.textContent = totalDifficulty.toFixed(1);
 
   // If filled all 8 skill values, disable buttons

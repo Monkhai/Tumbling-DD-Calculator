@@ -1,12 +1,8 @@
 import addSkill from './addSkill.js';
 import deleteSkill from './deleteSkill.js';
 import resetCalc from './resetCalc.js';
-import {
-  skillButtonEl,
-  deleteBtnEl,
-  resetBtnEl,
-  skillValuesEl,
-} from './selectors.js';
+import addBonus from './addBonus.js';
+import { skillButtonEl, deleteBtnEl, resetBtnEl, skillValuesEl, bonusDropdownEl } from './selectors.js';
 // This sets the value of each skillValue element to 0. This allows the total difficulty to calculate difficulty of not finished passes.
 skillValuesEl.forEach((skillValue) => {
   skillValue.value = 0;
@@ -28,6 +24,10 @@ export function decIndex() {
 // Add a skill
 skillButtonEl.forEach((button) => {
   button.addEventListener('click', addSkill);
+});
+
+bonusDropdownEl.forEach((dropdown) => {
+  dropdown.addEventListener('change', addBonus);
 });
 
 //delete skill

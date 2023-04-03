@@ -79,10 +79,13 @@ body {
   resize: none;
   text-align: center;
   vertical-align: middle;
+  box-sizing: border-box;
+  outline: none;
 }
 
-.skill__bonus__highlighted {
+.skill__bonus:hover {
   background-color: #323b40;
+  position: relative;
   font-size: 30px;
   color: #efcf4e;
   border: 2px solid #efcf4e;
@@ -238,10 +241,10 @@ body {
 
   .buttons {
     display: grid;
-    grid-template-columns: 60px repeat(6, 40px);
+    grid-template-columns: 60px repeat(6, 1fr);
     grid-template-rows: repeat(5, 2fr) !important;
     grid-row-gap: 2px;
-    grid-column-gap: 8 px;
+    grid-column-gap: 1px;
     justify-self: center;
     justify-items: center;
   }
