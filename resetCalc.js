@@ -11,12 +11,22 @@ export default function resetCalc() {
   });
 
   bonusDropdownEl.forEach((dropdown) => {
-    dropdown.value = 0;
+    dropdown.value = '0.0';
   });
 
   resetIndex();
 
-  let totalDifficulty = 0;
+  let skillDifficulty = 0;
+  skillValuesEl.forEach((skillValue) => {
+    skillDifficulty += parseFloat(skillValue.value);
+  });
+
+  let bonusDifficulty = 0;
+  bonusDropdownEl.forEach((dropdown) => {
+    bonusDifficulty += parseFloat(dropdown.value);
+  });
+
+  let totalDifficulty = bonusDifficulty + skillDifficulty;
 
   calcEl.textContent = totalDifficulty.toFixed(1);
 }

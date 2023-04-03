@@ -28,7 +28,6 @@ export default function addSkill(event) {
     bonusDifficulty += parseFloat(dropdown.value);
   });
   let totalDifficulty = SkillDifficulty + bonusDifficulty;
-  console.log(totalDifficulty);
   calcEl.textContent = totalDifficulty.toFixed(1);
 
   // If filled all 8 skill values, disable buttons
