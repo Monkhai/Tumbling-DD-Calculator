@@ -1,9 +1,9 @@
-import { calcEl, skillValuesEl, bonusDropdownEl } from './selectors.js';
+import { skillValuesEl, bonusDropdownEl, calcEl } from './selectors.js';
+export default function calculateDifficulty() {
+  let skillDifficulty = 0;
 
-export default function addBonus() {
-  let SkillDifficulty = 0;
   skillValuesEl.forEach((skillValue) => {
-    SkillDifficulty += parseFloat(skillValue.value);
+    skillDifficulty += parseFloat(skillValue.value);
   });
 
   let bonusDifficulty = 0;
@@ -11,7 +11,8 @@ export default function addBonus() {
     bonusDifficulty += parseFloat(dropdown.value);
   });
 
-  let totalDifficulty = SkillDifficulty + bonusDifficulty;
+  let totalDifficulty = bonusDifficulty + skillDifficulty;
+
   if (totalDifficulty > 0) {
     calcEl.textContent = totalDifficulty.toFixed(1);
   }
