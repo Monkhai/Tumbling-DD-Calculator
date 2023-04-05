@@ -18,4 +18,17 @@ export default function resetCalc() {
   resetIndex();
 
   calculateDifficulty();
+  // let skillDifficulty = 0;
+  // skillValuesEl.forEach((skillValue) => {
+  //   skillDifficulty += parseFloat(skillValue.value);
+  // });
+
+  // let bonusDifficulty = 0;
+  // bonusDropdownEl.forEach((dropdown) => {
+  //   bonusDifficulty += parseFloat(dropdown.value);
+  // });
+
+  // let totalDifficulty = bonusDifficulty + skillDifficulty;
+
+  // calcEl.textContent = totalDifficulty.toFixed(1);
 }

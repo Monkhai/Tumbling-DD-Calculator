@@ -26,6 +26,10 @@ body {
   text-size-adjust: auto;
 }
 
+.small__title {
+  display: none !important;
+}
+
 .value_presentor {
   padding-left: 5px !important;
 }
@@ -66,7 +70,6 @@ body {
   display: grid;
   justify-items: center;
   align-items: center;
-  padding: 1px 1px 1px 1px;
   border: 1px solid #efcf4e;
 }
 
@@ -74,8 +77,6 @@ body {
   background-color: #323b40;
   font-size: 2.2vw;
   color: #efcf4e;
-  border: 1px solid #efcf4e;
-  /* height: 41.5px; */
   resize: none;
   text-align: center;
   vertical-align: middle;
@@ -85,11 +86,8 @@ body {
 
 .skill__bonus:hover {
   background-color: #323b40;
-  position: relative;
-  /* font-size: 30px; */
   color: #efcf4e;
   border: 2px solid #efcf4e;
-  /* height: 41.5px; */
   resize: none;
   text-align: center;
   vertical-align: middle;
@@ -188,6 +186,8 @@ select {
 @media (max-width: 780px) {
   * {
     touch-action: manipulation;
+    overflow-x: hidden;
+    overflow-y: hidden;
   }
 
   body {
@@ -221,17 +221,27 @@ select {
   .titles {
     display: none;
   }
+
+  .small__title {
+    display: flex !important;
+    justify-content: center;
+    padding: 0 5px 0 5px !important;
+    font-size: 15px;
+  }
+
   .presentors {
-    width: 300px;
+    width: 18rem;
     display: grid;
     margin-bottom: 25px;
-    grid-template-rows: repeat(8, 1fr);
+    grid-template-rows: repeat(9, 1fr);
     grid-template-columns: repeat(4, 1fr);
-    font-size: 20px;
+    font-size: 18px;
     color: #efcf4e;
     border: 1px solid #efcf4e;
-    /* margin: 0px 50px 50px 50px; */
+    text-align: center;
+    justify-content: center;
     grid-template-areas:
+      'skill      DD         Bonus       ---'
       'skill-1    value-1    bonus-1    number-1'
       'skill-2    value-2    bonus-2    number-2'
       'skill-3    value-3    bonus-3    number-3'
@@ -241,6 +251,26 @@ select {
       'skill-7    value-7    bonus-7    number-7'
       'skill-8    value-8    bonus-8    number-8'
       'total-DD   total-DD   total-DD   total-DD';
+  }
+
+  select {
+    text-align-last: center;
+  }
+
+  .skill__presentor {
+    grid-area: skill;
+  }
+
+  .dd__presentor {
+    grid-area: DD;
+  }
+
+  .bonuses__presentor {
+    grid-area: Bonus;
+  }
+
+  .number__presentor {
+    grid-area: ---;
   }
 
   .buttons {
@@ -270,11 +300,14 @@ select {
   .skill__bonus {
     background-color: #323b40;
     color: #efcf4e;
-    /* border: 1px solid #efcf4e; */
-    height: 41.5px;
+    font-size: 15px;
+    height: 32px;
+    width: 100%;
+    border: 1px solid #efcf4e;
     resize: none;
-    text-align: center;
-    vertical-align: middle;
+    text-align: center !important;
+    justify-content: center !important;
+    justify-items: center !important;
     box-sizing: border-box;
     outline: none;
   }
@@ -282,11 +315,12 @@ select {
   .skill__bonus:hover {
     background-color: #323b40;
     color: #efcf4e;
+    font-size: 15px;
+    height: 32px;
     border: 1px solid #efcf4e;
-    height: 41.5px;
     resize: none;
-    text-align: center;
-    vertical-align: middle;
+    text-align: center !important;
+    justify-content: center;
     box-sizing: border-box;
     outline: none;
   }
