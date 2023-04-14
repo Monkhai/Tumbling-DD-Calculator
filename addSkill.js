@@ -1,4 +1,4 @@
-import { calcEl, skillValuesEl, skillButtonEl, skillNamesEl, bonusDropdownEl } from './selectors.js';
+import { skillValuesEl, skillButtonEl, skillNamesEl } from './selectors.js';
 import { skillIndex, incIndex } from './script.js';
 import calculateDifficulty from './calculateDifficulty.js';
 

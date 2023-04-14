@@ -27,13 +27,6 @@ export function decIndex() {
   skillIndex--;
 }
 
-export function disableButtons() {
-  if (skillIndex > 7) {
-    console.log('disabling the buttons');
-    skillButtonEl.disabled = true;
-  }
-}
-
 // Add a skill
 skillButtonEl.forEach((button) => {
   button.addEventListener('click', addSkill);
