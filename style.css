@@ -17,11 +17,12 @@ body {
 }
 
 .title {
-  padding-top: 10px;
+  padding-top: 1vw;
+  padding-bottom: 1vw;
   font-size: 5vw;
   justify-self: center;
   color: #efcf4e;
-  height: 100px;
+  height: 5vw;
   width: 90%;
   text-size-adjust: auto;
 }
@@ -95,6 +96,7 @@ body {
 
 select {
   appearance: none;
+  font-family: 'Merriweather', sans-serif;
 }
 
 .buttons {
