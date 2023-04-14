@@ -1,7 +1,13 @@
 import addSkill from './addSkill.js';
 import deleteSkill from './deleteSkill.js';
 import resetCalc from './resetCalc.js';
-import { skillButtonEl, deleteBtnEl, resetBtnEl, skillValuesEl, bonusDropdownEl } from './selectors.js';
+import {
+  skillButtonEl,
+  deleteBtnEl,
+  resetBtnEl,
+  skillValuesEl,
+  bonusDropdownEl,
+} from './selectors.js';
 import calculateDifficulty from './calculateDifficulty.js';
 
 skillValuesEl.forEach((skillValue) => {
@@ -9,7 +15,7 @@ skillValuesEl.forEach((skillValue) => {
 });
 
 // Initialize the skill index to 0
-export let skillIndex = 0;
+let skillIndex = 0;
 export function resetIndex() {
   skillIndex = 0;
 }
