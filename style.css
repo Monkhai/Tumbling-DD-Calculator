@@ -85,17 +85,7 @@ body {
   outline: none;
 }
 
-.skill__bonus:hover {
-  background-color: #323b40;
-  color: #efcf4e;
-  border: 2px solid #efcf4e;
-  resize: none;
-  text-align: center;
-  vertical-align: middle;
-}
-
 select {
-  appearance: none;
   font-family: 'Merriweather', sans-serif;
 }
 
