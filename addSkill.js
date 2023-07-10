@@ -2,10 +2,6 @@ import { skillValuesEl, skillButtonEl, skillNamesEl } from './selectors.js';
 import { skillIndex, incIndex } from './script.js';
 import calculateDifficulty from './calculateDifficulty.js';
 
-// skillValuesEl.forEach((skillValue) => {
-//   skillValue.value = 0;
-// });
-
 export default function addSkill(event) {
   const button = event.target;
   if (skillIndex > 7) {
