@@ -10,7 +10,7 @@ body {
 .privacy_policy_btn {
   position: absolute;
   left: 100px;
-  bottom: 100px;
+  bottom: 20px;
   width: 40px;
   height: 40px;
   background-color: transparent;
